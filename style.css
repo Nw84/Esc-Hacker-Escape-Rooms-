@@ -1,0 +1,397 @@
+/* universal styling som tar bort margins etc */
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* container styling och i det här fallet grid*/
+
+.container {
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 130px auto auto;
+}
+
+/* tar bort stylingen ifrån a href länkarna */
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* styling för headern och navigations menyn */
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 13;
+
+  margin-top: 5px;
+}
+
+.header-container {
+  display: flex;
+}
+
+.header-boll {
+  display: block;
+  background: #b8a9c9;
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+}
+
+.header-h1 {
+  margin-top: 17px;
+}
+
+.navbar-container {
+  text-align: center;
+  margin: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0% 20%;
+}
+
+/* Styling för den stora första bilden och knapparna nedanför  */
+
+.main-picture {
+  background-image: url("/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  height: 35vh;
+  width: 100%;
+  grid-column: 1 / 13;
+}
+
+.main-button-container {
+  display: flex;
+  grid-column: 1 / span 12;
+  justify-content: center;
+  margin-top: -25px;
+  margin-bottom: 30px;
+}
+
+.main-button {
+  background-color: #4040a1;
+  color: white;
+  padding: 10px 25px;
+  margin: 10px;
+  border-radius: 3%;
+  font-size: 16px;
+}
+
+.main-button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #4040a1;
+}
+
+/* styling for mobile version och Här ändrar jag till align items center och flex direction till column och sen ord 1 på main-buttons 1 child, så att on-site challenges kommer först*/
+
+@media screen and (max-width: 800px) {
+  .main-button-container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-button {
+    margin: 0;
+  }
+
+  .main-button:nth-child(1) {
+    order: 1;
+    background-color: white;
+    color: #4040a1;
+    text-decoration: underline;
+  }
+
+  .disapear-icon {
+    display: none;
+  }
+
+  .main-button {
+    grid-column: 1 / span 12;
+  }
+
+  .main-button-right {
+    float: left;
+  }
+}
+
+/* Styling för testimonials delen och dess bilder */
+.testimonial-container {
+  grid-column-start: 1;
+  grid-column-end: 26;
+
+  display: grid;
+
+  grid-template-columns: repeat(26, 1fr);
+  grid-template-rows: 160px auto auto;
+}
+
+.testimonial-1 {
+  grid-column: 1 / span 11;
+  display: flex;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.testimonial-2 {
+  grid-column: 13 / 26;
+  display: flex;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 800px) {
+  .testimonial-1 {
+    display: none;
+  }
+  .testimonial-2 {
+    grid-column: 1 / 26;
+  }
+}
+
+.testimonial-bild1 {
+  display: block;
+  background: gray;
+  border-radius: 100%;
+  height: 60px;
+  width: 140px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+
+.testimonial-bild2 {
+  display: block;
+  background: gray;
+  border-radius: 100%;
+  height: 60px;
+  width: 140px;
+  margin-right: 15px;
+  margin-bottom: 25px;
+}
+
+/* Styling för Popular Challenges delen */
+
+.popularContainer {
+  grid-column-start: 1;
+  grid-column-end: 40;
+
+  display: grid;
+
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: 130px auto auto;
+}
+
+.popularHeader {
+  text-align: center;
+  grid-column: 1 / 40;
+  margin-top: 50px;
+}
+
+.popular1 {
+  grid-column: 2 / 14;
+  box-shadow: 0 0px 5px rgba(104, 104, 104, 0.8);
+}
+
+.popular1Bild {
+  background-image: url("/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  height: 20vh;
+  width: 100%;
+  grid-column: 1 / 40;
+}
+
+.popular2 {
+  grid-column: 15/ 27;
+  box-shadow: 0 0px 5px rgba(104, 104, 104, 0.8);
+}
+
+.popular2Bild {
+  background-image: url("/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  height: 20vh;
+  width: 100%;
+  grid-column: 1 / 40;
+}
+
+.popular3 {
+  grid-column: 28 / 40;
+  box-shadow: 0 0px 5px rgba(104, 104, 104, 0.8);
+}
+
+.popular3Bild {
+  background-image: url("/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  height: 20vh;
+  width: 100%;
+  grid-column: 1 / 40;
+}
+
+.popularTopText {
+  padding: 5px 5px;
+}
+
+.popularTopUnderText {
+  font-size: 12px;
+}
+
+.popularBottomText {
+  padding: 5px 5px;
+}
+
+.popularButton {
+  background-color: #4040a1;
+  color: white;
+  padding: 5px 15px;
+  margin: 10px;
+  border-radius: 3%;
+  float: right;
+}
+
+.popularButton:hover {
+  background-color: white;
+  color: #4040a1;
+  cursor: pointer;
+}
+
+/* Styling för readFullstory delen */
+
+.readFullStory-container {
+  grid-column-start: 1;
+  grid-column-end: 24;
+  display: grid;
+
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: 50px auto auto;
+  margin-top: 60px;
+}
+
+.secondary-button {
+  background-color: white;
+  color: #4040a1;
+  padding: 5px 15px;
+  margin: 10px;
+  border-radius: 3%;
+  border: 2px solid;
+  border-color: gray;
+}
+
+.secondary-button:hover {
+  cursor: pointer;
+  background-color: #4040a1;
+  color: white;
+}
+
+.fullStory-button1 {
+  grid-column: 6 / 12;
+}
+
+.fullStory-button2 {
+  grid-column: 12 / 18;
+}
+
+.fullStoryText {
+  grid-column: 6 / 19;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.fullStory-button3 {
+  grid-column: 8 / 16;
+  margin-bottom: 50px;
+}
+
+/* Styling för bottomSektion delen */
+.bottomSektion {
+  grid-column-start: 1;
+  grid-column-end: 24;
+  display: grid;
+
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: 300px auto auto;
+  margin-top: 60px;
+  margin-bottom: 90px;
+}
+
+.leftPicture {
+  background-image: url("/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  grid-column: 1 / span 12;
+}
+
+.rightTextContainer {
+  grid-column: 13 / span 24;
+  padding: 40px;
+}
+
+.bottomTextHeader {
+  padding: 10px;
+}
+
+.bottomText {
+  padding: 10px;
+}
+
+.rightPicture {
+  background-image: url("/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  grid-column: 13 / span 24;
+}
+
+.leftTextContainer {
+  grid-column: 1 / span 12;
+  padding: 40px;
+}
+
+/* Styling för footer delen */
+
+.footer-container {
+  grid-column-start: 1;
+  grid-column-end: 24;
+  display: grid;
+
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: 240px auto auto;
+
+  background-color: lightgray;
+}
+
+.footerText {
+  margin-top: 60px;
+  grid-column: 2 / 9;
+}
+
+.footer-navbar {
+  margin-top: 60px;
+  grid-column: 12 / 14;
+}
+
+.footer-socials {
+  margin-top: 60px;
+  grid-column: 17 / 20;
+}
+
+.footer-mainText {
+  font-weight: bold;
+}
