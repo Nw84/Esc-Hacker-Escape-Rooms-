@@ -117,7 +117,7 @@ header nav a:nth-child(4):hover {
 
 /* Styling för den stora första bilden och knapparna nedanför  */
 .main-picture {
-  background-image: url("https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/hacker.jpg");
+  background-image: url(https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/hacker.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -197,7 +197,7 @@ header nav a:nth-child(4):hover {
   }
 }
 .testimonial-container .testimonial .testimonial-bild {
-  background-image: url("https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/johnDoo.jpg");
+  background-image: url(https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/johnDoo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -270,7 +270,7 @@ header nav a:nth-child(4):hover {
   }
 }
 .popular-container .popular-container-inner .popularCard .popularBild {
-  background-image: url("https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/hacker.jpg");
+  background-image: url(https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/hacker.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
@@ -425,7 +425,7 @@ header nav a:nth-child(4):hover {
   }
 }
 .bottomSektion .leftPicture {
-  background-image: url("https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/friends.jpg");
+  background-image: url(https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/friends.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -439,7 +439,7 @@ header nav a:nth-child(4):hover {
   }
 }
 .bottomSektion .rightPicture {
-  background-image: url("https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/online.jpg");
+  background-image: url(https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/online.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
