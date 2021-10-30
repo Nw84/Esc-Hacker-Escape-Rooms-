@@ -117,7 +117,7 @@ header nav a:nth-child(4):hover {
 
 /* Styling för den stora första bilden och knapparna nedanför  */
 .main-picture {
-  background-image: url(https://github.com/Nw84/Esc-Hacker-Escape-Rooms-/tree/main/img/hacker.jpg);
+  background-image: url("https://github.com/Nw84/Esc-Hacker-Escape-Rooms-/tree/main/img/hacker.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -303,7 +303,7 @@ header nav a:nth-child(4):hover {
   }
 }
 .popular-container .popular-container-inner .popularCard .popularRating-container .popularRatingText {
-  font-size: 12px;
+  font-size: 1px;
   margin-right: 10px;
 }
 @media screen and (max-width: 800px) {
