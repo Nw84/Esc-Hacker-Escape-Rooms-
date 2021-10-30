@@ -1,9 +1,23 @@
-@charset "UTF-8";
-/* Variabler */
-/* Fonter */
+/* 
+ *1. Table of content
+ *2. Variables
+ *3. Custom Fonts
+ *4. Universal styling
+ *5. Color styling for the buttons
+ *6. Header and navigation
+ *7. Main picture and its buttons
+ *8. Testimonial sektion 
+ *9. Popular Challenges sektion
+ *10. Full story sektion
+ *11. Bottom sektion
+ *12. footer 
+
+*/
+/* 2. Variables */
+/* 3. Custom Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Monofett&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/* universal styling som tar bort margins etc */
+/* 4. Universal styling that removes margins etc */
 * {
   border: 0;
   padding: 0;
@@ -11,13 +25,18 @@
   font-family: "Roboto", "sans-serif";
 }
 
-/* container styling och i det här fallet grid*/
+/* removes dekoration from the a links */
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .container {
   position: relative;
   width: 100%;
 }
 
-/* farg styling för knappar */
+/* 5. color styling for the buttons*/
 .primary-button {
   background-color: #e3170a;
   color: white;
@@ -34,13 +53,7 @@
   color: #8acfe5;
 }
 
-/* tar bort stylingen ifrån a href länkarna */
-a {
-  color: black;
-  text-decoration: none;
-}
-
-/* styling för headern och navigations menyn */
+/* 6. styling for the header and navigation menu  */
 header {
   width: 100%;
   height: 216px;
@@ -115,7 +128,7 @@ header nav a:nth-child(4):hover {
   color: #e3170a;
 }
 
-/* Styling för den stora första bilden och knapparna nedanför  */
+/* 7. Styling for the main picture on the site and the buttons beneath it */
 .main-picture {
   background-image: url(https://nw84.github.io/Esc-Hacker-Escape-Rooms-/img/hacker.jpg);
   background-repeat: no-repeat;
@@ -136,7 +149,7 @@ header nav a:nth-child(4):hover {
   justify-content: center;
   margin-top: -30px;
   margin-bottom: 30px;
-  /* styling for mobile version och Här ändrar jag till align items center och flex direction till column och sen ord 1 på main-buttons 1 child, så att on-site challenges kommer först*/
+  /* styling for the mobile version och here i change to align items center and flex direction column on the container and order 1 etc on the first nth child, so that the on-site challenges button is displayed first */
 }
 @media screen and (max-width: 800px) {
   .main-button-container {
@@ -171,7 +184,7 @@ header nav a:nth-child(4):hover {
   }
 }
 
-/* Styling för testimonials delen och dess bilder */
+/* 8. Styling for the testimonial sektion */
 .testimonial-container {
   display: flex;
   justify-content: center;
@@ -184,7 +197,7 @@ header nav a:nth-child(4):hover {
   padding: 25px;
   font-style: italic;
   font-size: 24px;
-  /*  Tar bort den första testimonial delen på mobil versionen   */
+  /*  Removes the first testimonial on the mobile version   */
 }
 @media (max-width: 1480px) {
   .testimonial-container .testimonial {
@@ -222,7 +235,7 @@ header nav a:nth-child(4):hover {
   }
 }
 
-/* Styling för Popular Challenges delen */
+/* 9. Styling for the Popular Challenges sektion */
 .popular-container {
   margin-top: 30px;
 }
@@ -344,7 +357,7 @@ header nav a:nth-child(4):hover {
   cursor: pointer;
 }
 
-/* Styling för Fullstory delen */
+/* 10. Styling for the Fullstory sektion */
 .fullStory-container {
   margin-top: 20px;
 }
@@ -352,7 +365,7 @@ header nav a:nth-child(4):hover {
   margin-top: 50px;
   display: flex;
   justify-content: center;
-  /* styling for mobile version och Här ändrar jag till align items center och flex direction till column och sen ord 1 på main-buttons 1 child, så att on-site challenges kommer först*/
+  /* styling for the mobile version och here i change to align items center and flex direction column on the container and order 1 etc on the first nth child, so that the on-site challenges button is displayed first */
 }
 @media screen and (max-width: 800px) {
   .fullStory-container .fullStory-button-container {
@@ -419,7 +432,7 @@ header nav a:nth-child(4):hover {
   }
 }
 
-/* Styling för bottomSektion delen */
+/* 11. Styling for the bottomSektion */
 .bottomSektion {
   display: flex;
 }
@@ -501,7 +514,7 @@ header nav a:nth-child(4):hover {
   transform: scale(1.1, 1.1);
 }
 
-/* Styling för footer delen */
+/* 12. Styling the footer */
 footer {
   margin-top: 60px;
   width: 100%;
@@ -555,7 +568,7 @@ footer .footer-container .footer-navbar {
 @media screen and (max-width: 800px) {
   footer .footer-container .footer-navbar {
     padding: 25px;
-    width: 20%;
+    width: 30%;
   }
 }
 footer .footer-container .footer-navbar li {
@@ -575,7 +588,7 @@ footer .footer-container .footer-socials {
 @media screen and (max-width: 800px) {
   footer .footer-container .footer-socials {
     padding: 25px;
-    width: 20%;
+    width: 30%;
   }
 }
 footer .footer-container .footer-socials li {
