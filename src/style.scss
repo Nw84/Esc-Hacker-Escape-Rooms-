@@ -247,7 +247,10 @@ header {
     position: relative;
     overflow-x: hidden;
     height: 70vh;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
+  }
+  @media screen and (max-height: 700px) and (max-width: 800px) {
+    margin-bottom: 170px;
   }
 
   .popularHeader-container {
