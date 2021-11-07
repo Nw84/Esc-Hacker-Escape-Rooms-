@@ -51,6 +51,13 @@ a {
   width: 100%;
 }
 
+/* changes the max height when the mobile navbar is open */
+.container.open {
+  max-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
 /* 5. color styling for the buttons*/
 .primary-button {
   background-color: $main-color;
@@ -75,6 +82,7 @@ header {
   height: 216px;
 
   background-color: $black-color;
+  overflow: hidden;
 
   .headerTop-container {
     display: flex;
@@ -89,6 +97,10 @@ header {
       box-sizing: border-box;
       border-radius: 17px;
       margin-left: 27px;
+      @media screen and (max-width: 800px) {
+        margin-left: 18px;
+      }
+
       .logoText {
         position: absolute;
         bottom: 0;
@@ -116,6 +128,7 @@ header {
         width: 20%;
         height: 50%;
         font-size: 12px;
+        margin-left: 12px;
       }
     }
   }
@@ -145,6 +158,143 @@ header {
         color: $main-color;
       }
     }
+  }
+}
+
+/* Mobil view menu and modal styling */
+.mobileMenu {
+  background-color: transparent;
+  position: absolute;
+  width: 51px;
+  height: 30px;
+  top: 0.5%;
+  right: 4%;
+  z-index: 1502;
+
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  .line {
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    top: 1%;
+    right: 1%;
+    height: 6px;
+    width: 51px;
+    border-radius: 15px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      background-color: white;
+      border-radius: inherit;
+      top: -12px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      background-color: white;
+      border-radius: inherit;
+      top: 12px;
+    }
+  }
+}
+
+.mobileMenu.open {
+  top: 5.5%;
+  right: 8%;
+  animation: openMenu2 0.1s;
+  animation-delay: 0.12s;
+  animation-fill-mode: backwards;
+  .line {
+    background-color: transparent;
+
+    &:before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+    &:after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.mobileBackdrop.open {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1501;
+  opacity: 0.5;
+
+  animation: openMenu1 0.1s;
+}
+
+/* Animation for the backdrop */
+
+@keyframes openMenu1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.mobileModal {
+  display: none;
+}
+
+.mobileModal.open {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  width: 92%;
+  height: 95vh;
+  background-color: $black-color;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1501;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  margin-top: 3.5%;
+  margin-left: 3.5%;
+
+  box-sizing: border-box;
+
+  animation: openMenu2 0.1s;
+  animation-delay: 0.12s;
+  animation-fill-mode: backwards;
+  a {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    padding: 35px;
+    &:nth-child(1) {
+      margin-top: 30%;
+    }
+  }
+}
+
+/* Animation for the modal */
+
+@keyframes openMenu2 {
+  0% {
+    opacity: 0;
+    transform: scale(0.1, 0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
   }
 }
 
